@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Navigation</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            scroll-behavior: smooth; 
+        }
+        .scroll-container {
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth; 
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        .scroll-page {
+            width: 100%;
+            height: 100vh;
+            scroll-snap-align: start;
+            border: none;
+            
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="scroll-container">
+        <iframe src="Landing page/landing page.html" id="page1" class="scroll-page"></iframe>
+        <iframe src="What_is_CA_page.html" id="page2" class="scroll-page"></iframe>
+        <iframe src="perks_page.html" id="page3" class="scroll-page"></iframe>
+        <iframe src="rewards.html" id="page3" class="scroll-page"></iframe>
+        <iframe src="CAP_stats_page.html" id="page3" class="scroll-page"></iframe>
+        <iframe src="Antaragni 24/Antaragni24.html" id="page3" class="scroll-page"></iframe>
+        <iframe src="sponsors/sponsors.html" id="page3" class="scroll-page"></iframe>
+        <iframe src="FAQ.html" id="page3" class="scroll-page"></iframe>
+
+    </div>
+    <script>
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add keyboard navigation
+        window.addEventListener('keydown', function(e) {
+            const currentScroll = document.querySelector('.scroll-container').scrollTop;
+            const pageHeight = window.innerHeight;
+
+            if (e.key === 'ArrowDown') {
+                document.querySelector('.scroll-container').scrollTo({
+                    top: currentScroll + pageHeight,
+                    behavior: 'smooth'
+                });
+            } else if (e.key === 'ArrowUp') {
+                document.querySelector('.scroll-container').scrollTo({
+                    top: currentScroll - pageHeight,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            html, body{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #281549;
+                background-image: url("../imgs/12.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .full-outer{
+                height:100%;
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .bottom-part{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%; /* Occupy full width */
+                height: 100%;
+                justify-content: space-between;
+            }
+            .bottom-part img {
+                width: 100%;
+                height: auto;
+                max-height: 100%;
+                object-fit: contain; /* Maintain aspect ratio */
+            }
+            .apply-now {
+                width:100%;
+                background: linear-gradient(90deg, #6a00f4, #d91e91);
+                color: white;
+                border: none;
+                border-radius: 50px;
+                font-size: 100%;
+                padding: 0;
+                font-weight: bold;
+                cursor: pointer;
+                text-align: center;
+                text-transform: uppercase;
+                transition: background 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .apply-now:hover {
+                background: linear-gradient(90deg, #5a00d4, #b91a7f);
+            }
+            .apply-now::before {
+                content: "APPLY NOW";
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+                padding-top: 6.25%;
+                padding-bottom: 6.25%;
+                font-size: 120%; 
+            }
+            .title{
+                padding-top: 2%;
+                padding-left: 8%;
+                height:100%;
+                width:60%;
+                font-size: 2.5em;
+                display: flex;
+                color: white;
+                justify-content: flex-start;
+                align-items: center;
+                font-weight: bold;
+                flex-grow: 1;
+            }
+            .title-button{
+                height: 10%;
+                width: 100%;
+                display: flex;
+                flex-direction: row ;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .img1{
+                width:25%;
+            }
+            .img2{
+                width:38%;
+            }
+            .button_{
+                margin-top: 2%;
+                width:18%;
+                padding-right: 7%;
+                max-width:900px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class = "full-outer">
+            <div class = "title-button">
+                <div class = title>
+                    <h1>CAP  STATISTICS</h1>
+                </div>
+                <div class = "button_">
+                    <button class="apply-now"></button>
+                </div>
+            </div>
+
+            <div class = bottom-part>
+                <div class = "img1">
+                    <img src = "../imgs/9.png">
+                </div>
+                <div class = "img2">
+                    <img src = "../imgs/10.png">
+                </div>
+                <div class = "img1">
+                    <img src = "../imgs/11.png">
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

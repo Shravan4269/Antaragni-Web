@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 
+            
+        </title>
+
+        <style>
+            html, body{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #281549;
+                background-image: url("1.png");
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+            }
+
+            .heading{
+                display: flex;
+                justify-content: center;
+                padding-top: 30px;
+                padding-left: 400px;
+                /* max-width: 50%;
+                max-height: 30%; */
+                flex: 1;
+            }
+
+            .heading img {
+            
+                max-width: 100%; 
+                max-height: 80%;
+                
+                /* height: auto; */
+            }
+
+            .full-outer{
+                display: flex;
+                flex-direction: row;
+                height: 100%;
+            }
+
+            .leftpage{
+                display: flex;
+                flex-direction: column;
+                flex: 1.8;
+            }
+
+            .rightpage img{
+                width: 110%;
+                height: 90%;
+            }
+
+            .rightpage{
+                margin-left: 150px;
+                display: flex;
+                padding-right: 80px;
+                flex: 0.4;
+                align-items: flex-end;
+                align-content:end;
+                
+            }
+
+            .rightpage img{
+                max-height: 100%;
+            }
+
+            .centre{
+                margin-top: 0px;
+            }
+
+            .centre img{
+                width: 90%;
+                height: 93%;  
+            }
+
+            .bottom{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .next_{
+                background: #320bbe;
+                color: white;
+                border: none;
+                border-radius: 25px;
+                padding: 10px 110px;
+                font-size: 15px;
+                
+                cursor: pointer;
+                justify-content: center;
+                text-align: center;
+              
+                transition: background 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .next_:hover {
+                background: #1d05a4;
+            }
+
+            .gmail_{
+                background:#ffffff;
+                color: rgb(0, 0, 0);
+                border: none;
+                border-radius: 25px;
+                padding: 10px 60px;
+                font-size: 15px;
+                
+                cursor: pointer;
+                justify-content: center;
+                text-align: center;
+                
+                transition: background 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .gmail_:hover {
+                background: #787676;
+            }
+
+            .next,.gmail{
+                padding-left: 240px;
+            }
+            .gmail{
+                padding-top: 10px;
+            }
+            .text{
+                padding-left: 250px;
+            }
+            .T{
+                color: #ffffff;
+                font-size: 18px;
+                
+                
+            }
+            .Big{
+                color: #ffffff;
+                font-size: 38px;
+                font-weight: bold;
+                padding-left: 50px;
+                
+                margin: 0px;
+            }
+            .Small{
+                color: #ffffff;
+                font-size: 20px;
+                padding-left: 50px;
+                margin: 0px;
+            }
+
+            .left{
+                display: flex;
+                flex-direction: column;
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+            }
+            .details{
+                display: flex;
+                flex-direction: row;
+            }
+            .form-group {
+                margin-bottom: 15px;
+                position: relative;
+                padding: 5px 50px;
+            }
+            .form-group label {
+                position: relative;
+                top: 8px;
+                left: 15px;
+                background-color: #1f033d;
+                padding: 0 5px;
+                font-size: 12px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+            .form-group input {
+                width: calc(100% - 30px);
+                padding: 10px 15px;
+                border: 1px solid #ffffff;
+                border-radius: 4px;
+                background-color: transparent;
+                color: #fff;
+                font-size: 14px;
+            }
+            .form-group select{
+                width: calc(100%);
+                padding: 10px 15px;
+                border: 1px solid #ffffff;
+                border-radius: 4px;
+                background-color: transparent;
+                color: #060000;
+                font-size: 14px;
+            }
+           
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class = full-outer>
+            <div class = leftpage>
+                <div class = heading>
+                    <img src = "heading.png">
+                </div>
+
+                <div class = center>
+                    <div class = text1>
+                        <p class = Big> Create an Account</p>
+                        <p class = Small>Let's get started with general details!</p>
+                    </div>
+                    <div class = details>
+                        <div class = left>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email id</label>
+                                <input type="email" id="email" name="email" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Set Password</label>
+                                <input type="password" id="password" name="password" value="">
+                            </div>
+                        </div>
+                        <div class = right>
+                            <div class="form-group">
+                                <label for="contact">Mobile No.</label>
+                                <input type="number" id="contact" name="contact" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsapp">Whatsapp</label>
+                                <input type="number" id="whatsapp" name="whatsapp" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="Gender">Gender</label>
+                                <select id="Gender" name="Gender">
+                                    <option value="Male" >Male</option>
+                                    <option value="Female" >Female</option>
+                                    <option value="Other" >Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class = bottom>
+                    <div class = next>
+                        <button class = "next_">Next</button>
+                    </div>
+                    <div class = gmail>
+                        <button class = "gmail_">Continue with gmail</button>
+                    </div>
+                    <div class = text>
+                        <p class="T">Already have a account? Log in</p>
+                    </div>
+                </div>
+            </div>
+            <div class = rightpage>
+                <img src="right.png">
+            </div>
+
+        </div>
+    </body>
+</html>

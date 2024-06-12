@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combined Webpage</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; 
+        }
+        .scroll-container {
+            display: flex;
+            flex-direction: column;
+            height: 200vh; 
+            overflow-y: scroll; 
+            scroll-snap-type: y mandatory; 
+            zoom:0.5;
+        }
+        .section {
+            height: 100vh; 
+            scroll-snap-align: start; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: white;
+        }
+        .section1 {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #281549;
+                background-image: url("imgs/7.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .section2 {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #281549;
+                background-image: url("imgs/12.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .full-outer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                color: white;
+            }
+            .title{
+                padding-left: 10%;
+                padding-right: 10%;
+                padding-top: 3%;
+                padding-bottom: 2%;
+                height: 12%; 
+                font-size: 1.8em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                text-align: left;
+            }
+            .outer-2{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 70%;
+                justify-content: center;
+                align-items: top;
+            }
+            .content {
+                padding-top: 4%;
+                padding-left: 2%;
+                padding-right: 5%;
+                /* height: 90%; */
+                width : 95%;
+                font-size: 1.8em;
+                line-height: 1.4;
+                text-align: left;
+                color: rgb(230, 236, 241);
+                max-width: 1400px;
+            }
+            .apply-now {
+                width:50%;
+                background: linear-gradient(90deg, #6a00f4, #d91e91);
+                color: white;
+                border: none;
+                border-radius: 55px;
+                font-size: 100%;
+                padding: 0;
+                font-weight: bold;
+                cursor: pointer;
+                text-align: center;
+                text-transform: uppercase;
+                transition: background 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .apply-now:hover {
+                background: linear-gradient(90deg, #5a00d4, #b91a7f);
+            }
+            .apply-now::before {
+                content: "APPLY NOW";
+                display: flex;
+                justify-content: center; /* Center-align the content horizontally */
+                align-items: center;
+                padding-top: 5.25%;
+                padding-bottom: 5.25%;
+                font-size: 170%; /* Aspect ratio: 16:9 */
+            }
+            .imgg img{
+                width :100%;
+                object-fit: contain;
+            
+            }
+            .imgg{
+                height:80%;
+            }
+            .left-side{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                max-width: 1000px;
+            }
+
+
+            .full-outer_2{
+                height:100%;
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .bottom-part{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%; /* Occupy full width */
+                height: 100%;
+                justify-content: space-between;
+            }
+            .bottom-part img {
+                width: 100%;
+                height: auto;
+                max-height: 100%;
+                object-fit: contain; /* Maintain aspect ratio */
+            }
+            .apply-now_2 {
+                width:100%;
+                background: linear-gradient(90deg, #6a00f4, #d91e91);
+                color: white;
+                border: none;
+                border-radius: 50px;
+                font-size: 100%;
+                padding: 0;
+                font-weight: bold;
+                cursor: pointer;
+                text-align: center;
+                text-transform: uppercase;
+                transition: background 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .apply-now_2:hover {
+                background: linear-gradient(90deg, #5a00d4, #b91a7f);
+            }
+            .apply-now_2::before {
+                content: "APPLY NOW";
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+                padding-top: 6.25%;
+                padding-bottom: 6.25%;
+                font-size: 120%; 
+            }
+            .title_2{
+                padding-top: 2%;
+                padding-left: 8%;
+                height:100%;
+                width:60%;
+                font-size: 2.5em;
+                display: flex;
+                color: white;
+                justify-content: flex-start;
+                align-items: center;
+                font-weight: bold;
+                flex-grow: 1;
+            }
+            .title-button{
+                height: 10%;
+                width: 100%;
+                display: flex;
+                flex-direction: row ;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .img1{
+                width:25%;
+                object-fit: contain;
+            }
+            .img2{
+                width:38%;
+                object-fit: contain;
+            }
+            .button_{
+                margin-top: 2%;
+                width:18%;
+                padding-right: 7%;
+                max-width:900px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="section section1">
+            <div class = full-outer>
+                <div class = title>
+                    <h1>WHAT IS CAMPUS AMBASSADOR PROGRAM?</h1>
+                </div>
+    
+                <div class = outer-2>
+                    <div class = "left-side">
+                        <div class = imgg>
+                            <img src = "imgs/8.png">
+                        </div>
+    
+                        <div>
+                            <button class="apply-now"></button>
+                        </div>
+                    </div>
+                    <div class = content>
+                        <h3>The Campus Ambassador Program is an
+                            initiative designed to empower students
+                            across universities and colleges by giving
+                            them the opportunity to act as liaisons
+                            between Antaragni and their campuses. As
+                            a Campus Ambassador, you will play a
+                            pivotal role in promoting Antaragni,
+                            fostering a strong community, and
+                            enhancing your professional skills.</h3>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+    
+        
+        </div>
+        <div class="section section2">
+            <div class = "full-outer_2">
+                <div class = "title-button">
+                    <div class = title_2>
+                        <h1>CAP  STATISTICS</h1>
+                    </div>
+                    <div class = "button_">
+                        <button class="apply-now_2"></button>
+                    </div>
+                </div>
+    
+                <div class = bottom-part>
+                    <div class = "img1">
+                        <img src = "imgs/9.png">
+                    </div>
+                    <div class = "img2">
+                        <img src = "imgs/10.png">
+                    </div>
+                    <div class = "img1">
+                        <img src = "imgs/11.png">
+                    </div>
+    
+                </div>
+            </div>
+    
+        
+        </div>
+    </div>
+</body>
+</html>
